@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="Filesystem">
+  <ownedViewpoints name="filesystem" label="Filesystem">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop']" name="filesystem_diagram" label="Container Diagram" domainClass="filesystem.Filesystem">
+      <defaultLayer name="Default">
+        <nodeMappings name="file" label="File" labelDirectEdit="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit_name']" semanticCandidatesExpression="[nodes/]" domainClass="filesystem.File">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="link" label="Link" labelDirectEdit="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit_name']" semanticCandidatesExpression="[nodes/]" domainClass="filesystem.Link">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelFormat="italic" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" width="6" height="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="link_edge" label="Edge Link" sourceMapping="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']" targetMapping="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='file'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@containerMappings[name='folder'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']" targetFinderExpression="[node/]" reconnections="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='recconect_link']">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="folder" label="Folder" labelDirectEdit="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit_name']" semanticCandidatesExpression="[nodes/]" domainClass="filesystem.Folder" dropDescriptions="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop']" reusedNodeMappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='file'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']" reusedContainerMappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@containerMappings[name='folder']">
+          <style xsi:type="style:FlatContainerStyleDescription">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="fs_tools" label="Filesystem">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new_file" label="FIle" nodeMappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='file']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="filesystem.File" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new_folder" label="Folder" containerMappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@containerMappings[name='folder']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="filesystem.Folder" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="new_link" label="Link" candidatesExpression="[if (container.oclIsTypeOf(Filesystem)) then container.eAllContents(&quot;Node&quot;) else container.eContainer(&quot;Filesystem&quot;).eAllContents(&quot;Node&quot;) endif/]" tree="true" rootExpression="[if (container.oclIsTypeOf(Filesystem)) then container.oclAsType(Filesystem).nodes else container.eContainer(Filesystem).nodes endif/]" childrenExpression="[if(self.oclIsTypeOf(Folder)) then self.oclAsType(Folder).nodes else null endif/]" iconPath="/br.ufes.inf.filesystem.edit/icons/full/obj16/Link.gif">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="filesystem.Link" referenceName="nodes">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="node" valueExpression="[element/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="edit_name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="[arg0/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="recconect_link">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="node" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop" mappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='file'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@containerMappings[name='folder'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="[newSemanticContainer/]" featureName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Link" position="NORTH_WEST" decoratorPath="/br.ufes.inf.filesystem.edit/icons/full/obj16/Link.gif" mappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="File" decoratorPath="/br.ufes.inf.filesystem.edit/icons/full/obj16/File.gif" preconditionExpression="[if(oclIsTypeOf(Link) and oclAsType(Link).node.oclIsTypeOf(File)) then true else false endif/]" mappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Folder" decoratorPath="/br.ufes.inf.filesystem.edit/icons/full/obj16/Folder.gif" preconditionExpression="[if(oclIsTypeOf(Link) and oclAsType(Link).node.oclIsTypeOf(Folder)) then true else false endif/]" mappings="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_diagram']/@defaultLayer/@nodeMappings[name='link']"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="filesystem_edge_diagram" label="Edge Diagram" domainClass="filesystem.Filesystem">
+      <defaultLayer name="Default">
+        <nodeMappings name="folder" label="Folder" semanticCandidatesExpression="[eAllContents()/]" domainClass="filesystem.Folder">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="filesystem" label="Filesystem" semanticCandidatesExpression="[self/]" domainClass="filesystem.Filesystem">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelFormat="italic" labelExpression="(root)" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="link_edge" label="Edge Link" sourceMapping="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@optionalLayers[name='opt_files']/@nodeMappings[name='link']" targetMapping="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@optionalLayers[name='opt_files']/@nodeMappings[name='file'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@optionalLayers[name='opt_files']/@nodeMappings[name='link'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@defaultLayer/@nodeMappings[name='folder']" targetFinderExpression="[node/]">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="link_parent" label="Edge Parent" sourceMapping="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@optionalLayers[name='opt_files']/@nodeMappings[name='link'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@optionalLayers[name='opt_files']/@nodeMappings[name='file'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@defaultLayer/@nodeMappings[name='folder']" targetMapping="//@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@defaultLayer/@nodeMappings[name='folder'] //@ownedViewpoints[name='filesystem']/@ownedRepresentations[name='filesystem_edge_diagram']/@defaultLayer/@nodeMappings[name='filesystem']" targetFinderExpression="[eContainer()/]">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="tree">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+      <optionalLayers name="opt_files" label="Files &amp; Links">
+        <nodeMappings name="file" label="File" semanticCandidatesExpression="[eAllContents()/]" domainClass="filesystem.File">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="link" label="Link" semanticCandidatesExpression="[eAllContents()/]" domainClass="filesystem.Link">
+          <style xsi:type="style:SquareDescription" labelFormat="italic" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[node.oclIsTypeOf(Folder)/]">
+            <style xsi:type="style:SquareDescription" labelFormat="italic" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+      </optionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

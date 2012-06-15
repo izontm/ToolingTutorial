@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filesystem:Filesystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:filesystem="http://www.example.org/filesystem">
+  <nodes xsi:type="filesystem:Folder" name="bin2">
+    <nodes xsi:type="filesystem:File" name="bash"/>
+    <nodes xsi:type="filesystem:Link" name="ifconfig" node="//@nodes.2/@nodes.0"/>
+  </nodes>
+  <nodes xsi:type="filesystem:Folder" name="usr">
+    <nodes xsi:type="filesystem:Folder" name="bin">
+      <nodes xsi:type="filesystem:Link" name="termnal" node="//@nodes.0/@nodes.0"/>
+      <nodes xsi:type="filesystem:Link" name="sh" node="//@nodes.1/@nodes.1/@nodes.0"/>
+    </nodes>
+    <nodes xsi:type="filesystem:Folder" name="sbin">
+      <nodes xsi:type="filesystem:File" name="sh"/>
+    </nodes>
+    <nodes xsi:type="filesystem:Link" name="sysbin" node="//@nodes.0"/>
+  </nodes>
+  <nodes xsi:type="filesystem:Folder" name="sbin">
+    <nodes xsi:type="filesystem:File" name="ifconfig"/>
+  </nodes>
+</filesystem:Filesystem>

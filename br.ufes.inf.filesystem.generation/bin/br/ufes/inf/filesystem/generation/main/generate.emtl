@@ -1,0 +1,1581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="br::ufes::inf::filesystem::generation::main::generate" startHeaderPosition="30" endHeaderPosition="118">
+    <input>
+      <takesTypesFrom href="http://www.example.org/filesystem#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="94" endPosition="118" value=" Superfolders of a node "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="superfolders" visibility="Public" type="/3/Sequence(Folder)">
+      <parameter name="n">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:IfExp" eType="/3/Collection(OclAny)">
+        <condition xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/superfolders/n">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </condition>
+        <thenExpression xsi:type="ocl.ecore:IfExp" eType="/3/Collection(OclAny)">
+          <condition xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/superfolders/n">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eContainer"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+          </condition>
+          <thenExpression xsi:type="ocl.ecore:IfExp" eType="/3/Collection(OclAny)">
+            <condition xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/superfolders/n">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eContainer"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Folder">
+                <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+            </condition>
+            <thenExpression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(OclAny)">
+              <source xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(EObject)" kind="Sequence">
+                <part xsi:type="ocl.ecore:CollectionItem">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+                  <item xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/superfolders/n">
+                      <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eContainer"/>
+                  </item>
+                </part>
+              </source>
+              <argument xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/superfolders">
+                <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/EObject_Class/eContainer">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/superfolders/n">
+                    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Folder">
+                    <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+                  </argument>
+                </argument>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/union"/>
+            </thenExpression>
+            <elseExpression xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/OrderedSet(OclVoid)" kind="OrderedSet"/>
+          </thenExpression>
+          <elseExpression xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/OrderedSet(OclVoid)" kind="OrderedSet"/>
+        </thenExpression>
+        <elseExpression xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/OrderedSet(OclVoid)" kind="OrderedSet"/>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="518" endPosition="537" value=" Diff of two paths "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="excludingAll" visibility="Public" type="/3/Sequence(Folder)">
+      <parameter name="to" eType="/3/Sequence(Folder)"/>
+      <parameter name="from" eType="/3/Sequence(Folder)"/>
+      <expression xsi:type="ocl.ecore:IterateExp" name="iterate" eType="/3/Sequence(Folder)">
+        <source xsi:type="ocl.ecore:VariableExp" name="from" eType="/3/Sequence(Folder)" referredVariable="/0/excludingAll/from"/>
+        <body xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(Folder)">
+          <source xsi:type="ocl.ecore:VariableExp" name="acc" eType="/3/Sequence(Folder)" referredVariable="/0/excludingAll/iterate/acc"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="f" referredVariable="/0/excludingAll/iterate/f">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/excluding"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="f">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+        </iterator>
+        <result xsi:type="ocl.ecore:Variable" name="acc" eType="/3/Sequence(Folder)">
+          <initExpression xsi:type="ocl.ecore:VariableExp" name="to" eType="/3/Sequence(Folder)" referredVariable="/0/excludingAll/to"/>
+        </result>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="728" endPosition="754" value=" Generate the &quot;sh&quot; script "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="#!/bin/bash&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/node">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generateElement/@body.0/@body.1/n">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Node)">
+            <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/16">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/filesystem#//Filesystem/nodes"/>
+          </iterSet>
+        </body>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="script/create_files.sh">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="f">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="960" endPosition="981" value=" Node representation "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="node" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="touch "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/filesystem#//Node/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/5/File">
+            <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//File"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+        </ifExpr>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="mtl:LetBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ln -snf "/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/relative">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/node/@body.1/@body.0/l">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/node/@body.1/@body.0/l">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/filesystem#//Link/node"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/filesystem#//Node/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/node/@body.1/@body.0/l">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/filesystem#//Node/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <letVariable name="l">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+            <initExpression xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Link">
+                <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </initExpression>
+          </letVariable>
+        </body>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Link">
+            <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+        </ifExpr>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="mkdir "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/filesystem#//Node/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;cd "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/filesystem#//Node/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/node">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="sn" referredVariable="/0/node/@body.2/@body.5/sn">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="sn">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Node)">
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Folder">
+                <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/filesystem#//Folder/nodes"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="cd ..&#xA;"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/node/n">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Folder">
+            <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+        </ifExpr>
+      </body>
+      <parameter name="n">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+      </parameter>
+      <post xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/trim">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/24">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </source>
+      </post>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="1373" endPosition="1423" value=" Relative path between a link and the target node "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="relative" visibility="Public">
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/back_path">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/relative/l">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+        </argument>
+      </body>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/go_path">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/relative/l">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+        </argument>
+      </body>
+      <parameter name="l">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="1513" endPosition="1559" value=" Root path between a link and the target node "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="back_path" visibility="Public">
+      <body xsi:type="mtl:LetBlock">
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".."/>
+            <loopVariable name="f">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:VariableExp" name="folders" eType="/3/Sequence(Folder)" referredVariable="/0/back_path/@body.0/folders"/>
+            <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </each>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="folders" eType="/3/Sequence(Folder)" referredVariable="/0/back_path/@body.0/folders"/>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/size"/>
+            </source>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+          </ifExpr>
+          <else>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;./&#xA;"/>
+          </else>
+        </body>
+        <letVariable name="folders" eType="/3/Sequence(Folder)">
+          <initExpression xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/excludingAll">
+            <argument xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/superfolders">
+              <argument xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/back_path/l">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+              </argument>
+            </argument>
+            <argument xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/superfolders">
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/back_path/l">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/filesystem#//Link/node"/>
+              </argument>
+            </argument>
+          </initExpression>
+        </letVariable>
+      </body>
+      <parameter name="l">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+      </parameter>
+      <post xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/trim">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/50">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </source>
+      </post>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="1842" endPosition="1939" value=" Relative path from the root path (between a link and the target node) to the target node folder "/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="go_path" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="f" referredVariable="/0/go_path/@body.1/f">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/filesystem#//Node/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+        <loopVariable name="f">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+        </loopVariable>
+        <iterSet xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/excludingAll">
+          <argument xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/superfolders">
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/go_path/l">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/filesystem#//Link/node"/>
+            </argument>
+          </argument>
+          <argument xsi:type="mtl:QueryInvocation" eType="/3/Sequence(Folder)" definition="/0/superfolders">
+            <argument xsi:type="ocl.ecore:VariableExp" name="l" referredVariable="/0/go_path/l">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+            </argument>
+          </argument>
+        </iterSet>
+      </body>
+      <parameter name="l">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+      </parameter>
+      <post xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/trim">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/62">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </source>
+      </post>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="trim">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="superfolders" eType="/3/Sequence(Folder)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/superfolders"/>
+        <eParameters name="n">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="excludingAll" eType="/3/Sequence(Folder)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/excludingAll"/>
+        <eParameters name="to" eType="/3/Sequence(Folder)"/>
+        <eParameters name="from" eType="/3/Sequence(Folder)"/>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="f">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="node">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/node"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="n">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="relative">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/relative"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="l">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="back_path">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/back_path"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="l">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="go_path">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/go_path"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="l">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Node_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.example.org/filesystem#//Node"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(Folder)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL" references="/3/Sequence(Folder)"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Filesystem_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.example.org/filesystem#//Filesystem"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Link_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.example.org/filesystem#//Link"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Folder)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(EObject)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(OclVoid)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:CollectionType" name="Collection(OclAny)">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Node)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Folder">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="File">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//File"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Link">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self" eType="/3/Sequence(Folder)"/>
+  <ocl.ecore:Variable name="self" eType="/3/Sequence(Folder)"/>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Filesystem"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Folder"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/filesystem#//Link"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/@ownedModuleElement.0">
+      <details key="start" value="86"/>
+      <details key="end" value="120"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/superfolders">
+      <details key="start" value="121"/>
+      <details key="end" value="508"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/superfolders/n">
+      <details key="start" value="148"/>
+      <details key="end" value="156"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/superfolders/@expression">
+      <details key="start" value="184"/>
+      <details key="end" value="505"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/superfolders/@expression/@condition">
+      <details key="start" value="187"/>
+      <details key="end" value="209"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/superfolders/@expression/@condition/@source">
+      <details key="start" value="191"/>
+      <details key="end" value="209"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/superfolders/@expression/@condition/@source/n">
+      <details key="start" value="191"/>
+      <details key="end" value="192"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/superfolders/@expression/@thenExpression">
+      <details key="start" value="217"/>
+      <details key="end" value="469"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/superfolders/@expression/@thenExpression/@condition">
+      <details key="start" value="220"/>
+      <details key="end" value="255"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/superfolders/@expression/@thenExpression/@condition/@source">
+      <details key="start" value="224"/>
+      <details key="end" value="255"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/superfolders/@expression/@thenExpression/@condition/@source/@source">
+      <details key="start" value="224"/>
+      <details key="end" value="238"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/superfolders/@expression/@thenExpression/@condition/@source/@source/n">
+      <details key="start" value="224"/>
+      <details key="end" value="225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/superfolders/@expression/@thenExpression/@thenExpression">
+      <details key="start" value="264"/>
+      <details key="end" value="430"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@condition">
+      <details key="start" value="267"/>
+      <details key="end" value="303"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@condition/@source">
+      <details key="start" value="268"/>
+      <details key="end" value="282"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@condition/@source/n">
+      <details key="start" value="268"/>
+      <details key="end" value="269"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@condition/@argument.0">
+      <details key="start" value="295"/>
+      <details key="end" value="301"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression">
+      <details key="start" value="313"/>
+      <details key="end" value="388"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@source">
+      <details key="start" value="313"/>
+      <details key="end" value="345"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@source/@part.0/@item">
+      <details key="start" value="330"/>
+      <details key="end" value="344"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@source/@part.0/@item/n">
+      <details key="start" value="330"/>
+      <details key="end" value="331"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@argument.0">
+      <details key="start" value="353"/>
+      <details key="end" value="387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@argument.0/@argument.0">
+      <details key="start" value="366"/>
+      <details key="end" value="386"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@argument.0/@argument.0/n">
+      <details key="start" value="366"/>
+      <details key="end" value="367"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@thenExpression/@argument.0/@argument.0/@argument.0">
+      <details key="start" value="379"/>
+      <details key="end" value="385"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/superfolders/@expression/@thenExpression/@thenExpression/@elseExpression">
+      <details key="start" value="401"/>
+      <details key="end" value="421"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/superfolders/@expression/@thenExpression/@elseExpression">
+      <details key="start" value="441"/>
+      <details key="end" value="461"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/superfolders/@expression/@elseExpression">
+      <details key="start" value="478"/>
+      <details key="end" value="498"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/@ownedModuleElement.2">
+      <details key="start" value="510"/>
+      <details key="end" value="539"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/excludingAll">
+      <details key="start" value="540"/>
+      <details key="end" value="718"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/excludingAll/to">
+      <details key="start" value="567"/>
+      <details key="end" value="588"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/excludingAll/from">
+      <details key="start" value="590"/>
+      <details key="end" value="611"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/excludingAll/iterate">
+      <details key="start" value="635"/>
+      <details key="end" value="715"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/excludingAll/iterate/from">
+      <details key="start" value="635"/>
+      <details key="end" value="639"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/excludingAll/iterate/@body">
+      <details key="start" value="695"/>
+      <details key="end" value="712"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/excludingAll/iterate/@body/acc">
+      <details key="start" value="695"/>
+      <details key="end" value="698"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/excludingAll/iterate/@body/f">
+      <details key="start" value="710"/>
+      <details key="end" value="711"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/excludingAll/iterate/f">
+      <details key="start" value="652"/>
+      <details key="end" value="660"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/excludingAll/iterate/acc">
+      <details key="start" value="664"/>
+      <details key="end" value="690"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/excludingAll/iterate/acc/to">
+      <details key="start" value="688"/>
+      <details key="end" value="690"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/@ownedModuleElement.4">
+      <details key="start" value="720"/>
+      <details key="end" value="756"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateElement">
+      <details key="start" value="757"/>
+      <details key="end" value="950"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateElement/@body.0">
+      <details key="start" value="824"/>
+      <details key="end" value="938"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateElement/@body.0/@body.0">
+      <details key="start" value="874"/>
+      <details key="end" value="886"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateElement/@body.0/@body.1">
+      <details key="start" value="887"/>
+      <details key="end" value="930"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateElement/@body.0/@body.1/@body.0">
+      <details key="start" value="913"/>
+      <details key="end" value="920"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateElement/@body.0/@body.1/@body.0/n">
+      <details key="start" value="918"/>
+      <details key="end" value="919"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateElement/@body.0/@body.1/@body.1">
+      <details key="start" value="922"/>
+      <details key="end" value="923"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateElement/@body.0/@body.1/n">
+      <details key="start" value="893"/>
+      <details key="end" value="901"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateElement/@body.0/@body.1/@iterSet">
+      <details key="start" value="904"/>
+      <details key="end" value="909"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateElement/@body.0/@body.1/@iterSet/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateElement/@body.0/@fileUrl">
+      <details key="start" value="831"/>
+      <details key="end" value="855"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateElement/@body.0/@charset">
+      <details key="start" value="864"/>
+      <details key="end" value="871"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateElement/f">
+      <details key="start" value="790"/>
+      <details key="end" value="804"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/@ownedModuleElement.6">
+      <details key="start" value="952"/>
+      <details key="end" value="983"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/node">
+      <details key="start" value="984"/>
+      <details key="end" value="1363"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/node/@body.0">
+      <details key="start" value="1031"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/node/@body.0/@body.0">
+      <details key="start" value="1058"/>
+      <details key="end" value="1064"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/node/@body.0/@body.1">
+      <details key="start" value="1065"/>
+      <details key="end" value="1071"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/node/@body.0/@body.1/n">
+      <details key="start" value="1065"/>
+      <details key="end" value="1066"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/node/@body.0/@body.2">
+      <details key="start" value="1073"/>
+      <details key="end" value="1074"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/node/@body.0/@ifExpr">
+      <details key="start" value="1035"/>
+      <details key="end" value="1056"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/node/@body.0/@ifExpr/n">
+      <details key="start" value="1036"/>
+      <details key="end" value="1037"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/node/@body.0/@ifExpr/@argument.0">
+      <details key="start" value="1050"/>
+      <details key="end" value="1054"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/node/@body.1">
+      <details key="start" value="1082"/>
+      <details key="end" value="1209"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/node/@body.1/@body.0">
+      <details key="start" value="1111"/>
+      <details key="end" value="1202"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/node/@body.1/@body.0/@body.0">
+      <details key="start" value="1146"/>
+      <details key="end" value="1154"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/node/@body.1/@body.0/@body.1">
+      <details key="start" value="1155"/>
+      <details key="end" value="1167"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/node/@body.1/@body.0/@body.1/l">
+      <details key="start" value="1155"/>
+      <details key="end" value="1156"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/node/@body.1/@body.0/@body.2">
+      <details key="start" value="1170"/>
+      <details key="end" value="1181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/node/@body.1/@body.0/@body.2/@source">
+      <details key="start" value="1170"/>
+      <details key="end" value="1176"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/node/@body.1/@body.0/@body.2/@source/l">
+      <details key="start" value="1170"/>
+      <details key="end" value="1171"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/node/@body.1/@body.0/@body.3">
+      <details key="start" value="1183"/>
+      <details key="end" value="1184"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/node/@body.1/@body.0/@body.4">
+      <details key="start" value="1185"/>
+      <details key="end" value="1191"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/node/@body.1/@body.0/@body.4/l">
+      <details key="start" value="1185"/>
+      <details key="end" value="1186"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/node/@body.1/@body.0/@body.5">
+      <details key="start" value="1193"/>
+      <details key="end" value="1194"/>
+      <details key="line" value="50"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/node/@body.1/@body.0/l">
+      <details key="start" value="1116"/>
+      <details key="end" value="1144"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/node/@body.1/@body.0/l/@initExpression">
+      <details key="start" value="1128"/>
+      <details key="end" value="1145"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/node/@body.1/@body.0/l/@initExpression/n">
+      <details key="start" value="1128"/>
+      <details key="end" value="1129"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/node/@body.1/@body.0/l/@initExpression/@argument.0">
+      <details key="start" value="1140"/>
+      <details key="end" value="1144"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/node/@body.1/@ifExpr">
+      <details key="start" value="1086"/>
+      <details key="end" value="1107"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/node/@body.1/@ifExpr/n">
+      <details key="start" value="1087"/>
+      <details key="end" value="1088"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/node/@body.1/@ifExpr/@argument.0">
+      <details key="start" value="1101"/>
+      <details key="end" value="1105"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/node/@body.2">
+      <details key="start" value="1211"/>
+      <details key="end" value="1351"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/node/@body.2/@body.0">
+      <details key="start" value="1240"/>
+      <details key="end" value="1246"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/node/@body.2/@body.1">
+      <details key="start" value="1247"/>
+      <details key="end" value="1253"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/node/@body.2/@body.1/n">
+      <details key="start" value="1247"/>
+      <details key="end" value="1248"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/node/@body.2/@body.2">
+      <details key="start" value="1255"/>
+      <details key="end" value="1259"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/node/@body.2/@body.3">
+      <details key="start" value="1260"/>
+      <details key="end" value="1266"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/node/@body.2/@body.3/n">
+      <details key="start" value="1260"/>
+      <details key="end" value="1261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/node/@body.2/@body.4">
+      <details key="start" value="1268"/>
+      <details key="end" value="1269"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/node/@body.2/@body.5">
+      <details key="start" value="1271"/>
+      <details key="end" value="1338"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/node/@body.2/@body.5/@body.0">
+      <details key="start" value="1317"/>
+      <details key="end" value="1318"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/node/@body.2/@body.5/@body.1">
+      <details key="start" value="1319"/>
+      <details key="end" value="1327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/node/@body.2/@body.5/@body.1/sn">
+      <details key="start" value="1324"/>
+      <details key="end" value="1326"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/node/@body.2/@body.5/@body.2">
+      <details key="start" value="1329"/>
+      <details key="end" value="1330"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/node/@body.2/@body.5/sn">
+      <details key="start" value="1277"/>
+      <details key="end" value="1286"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/node/@body.2/@body.5/@iterSet">
+      <details key="start" value="1289"/>
+      <details key="end" value="1314"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/node/@body.2/@body.5/@iterSet/@source">
+      <details key="start" value="1289"/>
+      <details key="end" value="1308"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/node/@body.2/@body.5/@iterSet/@source/n">
+      <details key="start" value="1289"/>
+      <details key="end" value="1290"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/node/@body.2/@body.5/@iterSet/@source/@argument.0">
+      <details key="start" value="1301"/>
+      <details key="end" value="1307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/node/@body.2/@body.6">
+      <details key="start" value="1339"/>
+      <details key="end" value="1345"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/node/@body.2/@ifExpr">
+      <details key="start" value="1215"/>
+      <details key="end" value="1238"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/node/@body.2/@ifExpr/n">
+      <details key="start" value="1216"/>
+      <details key="end" value="1217"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/node/@body.2/@ifExpr/@argument.0">
+      <details key="start" value="1230"/>
+      <details key="end" value="1236"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/node/n">
+      <details key="start" value="1006"/>
+      <details key="end" value="1014"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/node/@post">
+      <details key="start" value="1021"/>
+      <details key="end" value="1027"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/node/@post/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/@ownedModuleElement.8">
+      <details key="start" value="1365"/>
+      <details key="end" value="1425"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/relative">
+      <details key="start" value="1426"/>
+      <details key="end" value="1503"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/relative/@body.0">
+      <details key="start" value="1464"/>
+      <details key="end" value="1476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/relative/@body.0/l">
+      <details key="start" value="1474"/>
+      <details key="end" value="1475"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/relative/@body.1">
+      <details key="start" value="1479"/>
+      <details key="end" value="1489"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/relative/@body.1/l">
+      <details key="start" value="1487"/>
+      <details key="end" value="1488"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/relative/l">
+      <details key="start" value="1452"/>
+      <details key="end" value="1460"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/@ownedModuleElement.10">
+      <details key="start" value="1505"/>
+      <details key="end" value="1561"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/back_path">
+      <details key="start" value="1562"/>
+      <details key="end" value="1832"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/back_path/@body.0">
+      <details key="start" value="1615"/>
+      <details key="end" value="1820"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/back_path/@body.0/@body.0">
+      <details key="start" value="1706"/>
+      <details key="end" value="1812"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/back_path/@body.0/@body.0/@body.0">
+      <details key="start" value="1731"/>
+      <details key="end" value="1734"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/back_path/@body.0/@body.0/@body.1">
+      <details key="start" value="1734"/>
+      <details key="end" value="1788"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/back_path/@body.0/@body.0/@body.1/@body.0">
+      <details key="start" value="1780"/>
+      <details key="end" value="1782"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/back_path/@body.0/@body.0/@body.1/f">
+      <details key="start" value="1740"/>
+      <details key="end" value="1750"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/back_path/@body.0/@body.0/@body.1/folders">
+      <details key="start" value="1754"/>
+      <details key="end" value="1761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/back_path/@body.0/@body.0/@body.1/@each">
+      <details key="start" value="1775"/>
+      <details key="end" value="1778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/back_path/@body.0/@body.0/@body.2">
+      <details key="start" value="1788"/>
+      <details key="end" value="1790"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/back_path/@body.0/@body.0/@ifExpr">
+      <details key="start" value="1710"/>
+      <details key="end" value="1729"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/back_path/@body.0/@body.0/@ifExpr/@source">
+      <details key="start" value="1711"/>
+      <details key="end" value="1726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/back_path/@body.0/@body.0/@ifExpr/@source/folders">
+      <details key="start" value="1711"/>
+      <details key="end" value="1718"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/back_path/@body.0/@body.0/@ifExpr/@argument.0">
+      <details key="start" value="1727"/>
+      <details key="end" value="1728"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/back_path/@body.0/@body.0/@else">
+      <details key="start" value="1792"/>
+      <details key="end" value="1807"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/back_path/@body.0/@body.0/@else/@body.0">
+      <details key="start" value="1799"/>
+      <details key="end" value="1805"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/back_path/@body.0/folders">
+      <details key="start" value="1620"/>
+      <details key="end" value="1702"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/back_path/@body.0/folders/@initExpression">
+      <details key="start" value="1650"/>
+      <details key="end" value="1703"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/back_path/@body.0/folders/@initExpression/@argument.0">
+      <details key="start" value="1650"/>
+      <details key="end" value="1666"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/back_path/@body.0/folders/@initExpression/@argument.0/l">
+      <details key="start" value="1650"/>
+      <details key="end" value="1651"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/back_path/@body.0/folders/@initExpression/@argument.1">
+      <details key="start" value="1681"/>
+      <details key="end" value="1702"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/back_path/@body.0/folders/@initExpression/@argument.1/@argument.0">
+      <details key="start" value="1681"/>
+      <details key="end" value="1687"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/back_path/@body.0/folders/@initExpression/@argument.1/@argument.0/l">
+      <details key="start" value="1681"/>
+      <details key="end" value="1682"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/back_path/l">
+      <details key="start" value="1589"/>
+      <details key="end" value="1597"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/back_path/@post">
+      <details key="start" value="1605"/>
+      <details key="end" value="1611"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/back_path/@post/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/@ownedModuleElement.12">
+      <details key="start" value="1834"/>
+      <details key="end" value="1941"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/go_path">
+      <details key="start" value="1942"/>
+      <details key="end" value="2097"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/go_path/@body.0">
+      <details key="start" value="1992"/>
+      <details key="end" value="1993"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/go_path/@body.1">
+      <details key="start" value="1993"/>
+      <details key="end" value="2085"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/go_path/@body.1/@body.0">
+      <details key="start" value="2070"/>
+      <details key="end" value="2076"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/go_path/@body.1/@body.0/f">
+      <details key="start" value="2070"/>
+      <details key="end" value="2071"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/go_path/@body.1/@body.1">
+      <details key="start" value="2078"/>
+      <details key="end" value="2079"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/go_path/@body.1/f">
+      <details key="start" value="1999"/>
+      <details key="end" value="2009"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/go_path/@body.1/@iterSet">
+      <details key="start" value="2013"/>
+      <details key="end" value="2066"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/go_path/@body.1/@iterSet/@argument.0">
+      <details key="start" value="2013"/>
+      <details key="end" value="2034"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/go_path/@body.1/@iterSet/@argument.0/@argument.0">
+      <details key="start" value="2013"/>
+      <details key="end" value="2019"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/go_path/@body.1/@iterSet/@argument.0/@argument.0/l">
+      <details key="start" value="2013"/>
+      <details key="end" value="2014"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/go_path/@body.1/@iterSet/@argument.1">
+      <details key="start" value="2049"/>
+      <details key="end" value="2065"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/go_path/@body.1/@iterSet/@argument.1/l">
+      <details key="start" value="2049"/>
+      <details key="end" value="2050"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/go_path/l">
+      <details key="start" value="1967"/>
+      <details key="end" value="1975"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/go_path/@post">
+      <details key="start" value="1983"/>
+      <details key="end" value="1989"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/go_path/@post/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

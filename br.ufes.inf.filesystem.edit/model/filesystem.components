@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
+  <eef-components:PropertiesEditionContext xmi:id="_9TTyULUEEeGuWJeqDLR_Cw" documentation="Edition Context for filesystem GenPackage">
+    <categories xmi:id="_9TTyUbUEEeGuWJeqDLR_Cw" name="filesystem">
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_9TTyUrUEEeGuWJeqDLR_Cw" name="Filesystem">
+        <model xsi:type="ecore:EClass" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Filesystem"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_9TTyVLUEEeGuWJeqDLR_Cw" name="Folder" views="_9TTyYbUEEeGuWJeqDLR_Cw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_9TTyVbUEEeGuWJeqDLR_Cw" name="name" views="_9TTyY7UEEeGuWJeqDLR_Cw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Node/name"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Folder"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_9TTyV7UEEeGuWJeqDLR_Cw" name="File" views="_9TTyZbUEEeGuWJeqDLR_Cw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_9TTyWLUEEeGuWJeqDLR_Cw" name="name" views="_9TTyZ7UEEeGuWJeqDLR_Cw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Node/name"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//File"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_9TTyWbUEEeGuWJeqDLR_Cw" name="Link" views="_9TTyaLUEEeGuWJeqDLR_Cw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_9TTyWrUEEeGuWJeqDLR_Cw" name="name" views="_9TTyarUEEeGuWJeqDLR_Cw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Node/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_9TTyW7UEEeGuWJeqDLR_Cw" name="node" views="_9TTya7UEEeGuWJeqDLR_Cw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Link/node"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.ecore#//Link"/>
+      </bindings>
+    </categories>
+    <model href="platform:/resource/br.ufes.inf.filesystem/model/filesystem.genmodel#//filesystem"/>
+  </eef-components:PropertiesEditionContext>
+  <eef-views:ViewsRepository xmi:id="_9TTyXLUEEeGuWJeqDLR_Cw" documentation="Views repository for filesystem GenPackage" name="filesystem">
+    <RepositoryKind>SWT</RepositoryKind>
+    <RepositoryKind>Form</RepositoryKind>
+    <categories xmi:id="_9TTyXbUEEeGuWJeqDLR_Cw" name="filesystem">
+      <views xmi:id="_9TTyYbUEEeGuWJeqDLR_Cw" name="Folder">
+        <elements xsi:type="eef-views:Container" xmi:id="_9TTyYrUEEeGuWJeqDLR_Cw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_9TTyY7UEEeGuWJeqDLR_Cw" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_9TTyZbUEEeGuWJeqDLR_Cw" name="File">
+        <elements xsi:type="eef-views:Container" xmi:id="_9TTyZrUEEeGuWJeqDLR_Cw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_9TTyZ7UEEeGuWJeqDLR_Cw" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_9TTyaLUEEeGuWJeqDLR_Cw" name="Link">
+        <elements xsi:type="eef-views:Container" xmi:id="_9TTyabUEEeGuWJeqDLR_Cw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_9TTyarUEEeGuWJeqDLR_Cw" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_9TTya7UEEeGuWJeqDLR_Cw" name="node">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.9"/>
+          </elements>
+        </elements>
+      </views>
+    </categories>
+  </eef-views:ViewsRepository>
+</xmi:XMI>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+ <plugin>
+
+  <!-- EEF extensions -->
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.example.org/filesystem"
+            class="filesystem.providers.FilesystemEEFAdapterFactory"
+            supportedTypes="org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.eef.runtime.PropertiesEditionPartProvider">
+      <PropertiesEditionPartProvider
+            providerClass="filesystem.providers.FilesystemPropertiesEditionPartProvider">
+      </PropertiesEditionPartProvider>
+   </extension>
+
+  <!-- Tabbed properties views extension -->
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="fr.obeo.dsl.viewpoint.diagram"
+            labelProvider="org.eclipse.emf.eef.runtime.ui.utils.EEFLabelProvider">
+         <propertyCategory
+               category="default">
+         </propertyCategory>
+         <propertyCategory
+               category="extended">
+         </propertyCategory>
+         <propertyCategory
+               category="advanced">
+         </propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="fr.obeo.dsl.viewpoint.diagram">
+         <propertyTab
+               id="Base"
+               label="Base"
+               category="default">
+         </propertyTab>
+
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="fr.obeo.dsl.viewpoint.diagram">
+         <propertySection
+               class="filesystem.parts.forms.FolderPropertiesEditionPartForm"
+               filter="filesystem.providers.FolderPropertiesEditionProvider$EditionFilter"
+               id="filesystem.section.Folder"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="filesystem.parts.forms.FilePropertiesEditionPartForm"
+               filter="filesystem.providers.FilePropertiesEditionProvider$EditionFilter"
+               id="filesystem.section.File"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="filesystem.parts.forms.LinkPropertiesEditionPartForm"
+               filter="filesystem.providers.LinkPropertiesEditionProvider$EditionFilter"
+               id="filesystem.section.Link"
+               tab="Base">
+         </propertySection>
+      </propertySections>
+   </extension>
+ </plugin>
